@@ -1,15 +1,14 @@
 ---
-scripts:
-    - src: "./build/bundle.js"
-      defer: true
 styles:
     - href: "./build/bundle.css"
 ---
 
-# Test page
+# Les dernières carbos - restaurant à Floirac (33)
 
-Something should be written here:
+Toute [l'équipe](l-equipe) du restaurant vous souhaite la bienvenue :-)
 
-<section class="svelte-main"></section>
+Tout au long de l'année, nous vous proposons une variété de recettes de saison avec des produits locaux moyens selectionnés avec amour
 
-Did it work?
+Nous vous laissons découvrir [la carte](la-carte) à votre rythme
+
+et si vous êtes curieu.se.x, on vous raconte [notre démarche](a-propos) !

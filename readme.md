@@ -1,18 +1,17 @@
-# Front-end template
+# Resto dernières carbos
 
-This repo is meant to be a template repo. Not useful in itself, but a starter kit for other projects
+Pti projet qui consiste à créer un site web d'un restaurant très crédible, mais complètement faux
 
-This repo is based on [Jekyll](jekyllrb.com/), so content can be written in markdown or HTML
+La carte a la particularité d'afficher des prix qui n'ont rien à voir avec les prix du commerce et qui sont proportionnels à l'impact environnemental (impact carbone pour commencer) du plat qui serait préparé
 
-A simple theme is already set up
 
-A JavaScript bundler with [svelte](https://svelte.dev/) is set up
+[suivi](https://github.com/DavidBruant/resto-dernieres-carbo/projects/1?fullscreen=true)
 
-Continuous deployment is setup via Github Actions. The continuous deployement builds with `npm run build` then does a `git push origin online`, then triggers a github page build of the `online` branch
 
 ## Local dev
 
 ```sh
+sudo apt-get install libz-dev 
 npm install
 bundle install
 
