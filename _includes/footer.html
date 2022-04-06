@@ -1,11 +1,25 @@
 <footer>
-    <a href={{ /a-propos | relative_url }}>La démarche du restaurant</a>
-    <a href={{ /l-equipe | relative_url }}>L'équipe</a>
+    <a href={{ "/a-propos" | relative_url }}>La démarche du restaurant</a>
+    <a href={{ "/l-equipe" | relative_url }}>L'équipe</a>
     <a href="https://github.com/DavidBruant/resto-dernieres-carbo">le code source de ce site web sur github</a>
 </footer>
 
 <style>
     footer{
-        background-color: #115;
+        background-color: #141;
+        color: antiquewhite;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 2rem;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer a {
+        color: inherit;
     }
 </style>

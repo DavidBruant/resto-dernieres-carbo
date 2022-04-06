@@ -1,8 +1,3 @@
----
-styles:
-    - href: "./build/bundle.css"
----
-
 # Les dernières carbos - restaurant à Floirac (33)
 
 Toute [l'équipe](l-equipe) du restaurant vous souhaite la bienvenue :-)
