@@ -1,9 +1,3 @@
----
-scripts:
-    - src: "/build/bundle.js"
-      defer: true
----
-
 # La démarche
 
 Le restaurant n'existe pas\

@@ -1,10 +1,7 @@
-//import App from './App.svelte';
+import FoodProductClimateImpact from './FoodProductClimateImpact.svelte';
 import {csv} from 'd3-fetch'
 
-function totalEqCO2SansConsommation(produit){
-	return produit.agricultureEqCO2 + produit.emballageEqCO2 + produit.distributionEqCO2 + 
-	produit.transformationEqCO2 + produit.transportEqCO2
-}
+import {totalEqCO2SansConsommation} from './foodImpact/main.js'
 
 csv('/data/Agribalyse_Detail etape.csv')
 .then(data => {
@@ -42,17 +39,16 @@ csv('/data/Agribalyse_Detail etape.csv')
 	
 	*/
 
-	usefulList.sort((p1, p2) => totalEqCO2SansConsommation(p2) - totalEqCO2SansConsommation(p1))
 
 
 	console.log(usefulList)
 
+
+	const foodProductClimateImpact = new FoodProductClimateImpact({
+		target: document.querySelector('.product-climat-impact-chart'),
+		props: {
+			productClimateImpactData: usefulList
+		}
+	});
+
 })
-
-
-/*const app = new App({
-	target: document.querySelector('.svelte-main'),
-	props: {
-		name: 'from Svelte'
-	}
-});*/
