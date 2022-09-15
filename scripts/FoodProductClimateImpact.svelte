@@ -15,52 +15,62 @@
 
 <h2>{representedProducts.length} produits</h2>
 
-<table>
-    <thead>
-        <tr>
-            <th>nom</th>
-            <th>kg eq co<sub>2</sub> total sans consommation</th>
-        </tr>
-    </thead>
-    <tbody>
-        {#each representedProducts as product}
-		<tr>
-            <td>{product.nom}</td>
-            <td>
-                <div style="width: { ( totalEqCO2SansConsommation(product)*100 / maxClimateImpact ).toFixed(1) }%"></div>
-            </td> 
-        </tr>
-	    {/each}
-    </tbody>
-</table>
+<ol>
+{#each representedProducts as product}
+    <li>
+        <div class="nom" title={product.nom}>{product.nom}</div>
+        <div class="impact">
+            <div class="total" style="width: { ( totalEqCO2SansConsommation(product)*100 / maxClimateImpact ).toFixed(1) }%"></div>
+        </div> 
+    </li>
+{/each}
+</ol>
 
 
 <style lang="scss">
 
-table tbody tr{
+ol{
     display: flex;
-    width: 80vw;
+    flex-direction: column;
+    
+    margin: 0;
+    padding: 0;
 
-    td{
-        display: block;
-    }
+    li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-    td:nth-child(1){
-        width: 10rem;
-        font-weight: bold;
-    }
+        width: 70vw;
 
-    td:nth-child(2){
-        width: 80%;
-        display: block;
+        height: 2rem;
 
-        div{
-            height: 1rem;
-            background-color: #ccc;
+        .nom{
+            width: 12rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-right: 1rem;
+        }
+
+        .impact{
+            width: 60%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            .total{
+                height: 1rem;
+                background-color: #ccc;
+            }
 
         }
-    }
 
-} 
+    }
+}
+
 
 </style>
