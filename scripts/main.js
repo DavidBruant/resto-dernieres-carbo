@@ -31,15 +31,6 @@ csv('/data/Agribalyse_Detail etape.csv')
 		})
 
 	}) 
-	
-	/*
-		TODO
-		- calculer le max de la somme de tout sauf consommation
-		- trier en fonction du total kg eq CO2
-	
-	*/
-
-
 
 	console.log(usefulList)
 
