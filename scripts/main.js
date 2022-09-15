@@ -3,7 +3,7 @@ import {csv} from 'd3-fetch'
 
 import {totalEqCO2SansConsommation} from './foodImpact/main.js'
 
-csv('/data/Agribalyse_Detail etape.csv')
+csv('./data/Agribalyse_Detail etape.csv')
 .then(data => {
 	const usefulList = data.map(aliment => {
 		const {
